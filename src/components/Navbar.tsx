@@ -53,11 +53,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               className="flex items-center gap-3 group text-left focus:outline-none cursor-pointer"
               aria-label="Excel United International Home"
             >
-              <div className="w-10 h-10 sm:w-11 sm:h-11 aspect-square rounded-xl overflow-hidden shrink-0 shadow-xs group-hover:scale-105 transition-transform bg-[#F6EB14]">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 aspect-square rounded-xl overflow-hidden shrink-0 shadow-xs group-hover:scale-105 transition-transform bg-[#F6EB14] flex items-center justify-center p-0.5">
                 <img
                   src={COMPANY_INFO.logoSquareUrl}
                   alt="Excel United International Logo"
-                  className="w-full h-full object-cover select-none"
+                  className="w-full h-full object-contain select-none"
                 />
               </div>
 
@@ -105,82 +105,45 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
               {/* Mobile Menu Button */}
               <button
+                type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-                aria-label="Toggle Mobile Menu"
+                className="lg:hidden p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800/80 transition-colors cursor-pointer"
+                aria-label="Toggle mobile menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-xs lg:hidden transition-opacity"
-          onClick={() => setMobileMenuOpen(false)}
-        >
+        <div className="fixed inset-0 z-40 bg-slate-950/50 backdrop-blur-xs lg:hidden animate-fade-in" onClick={() => setMobileMenuOpen(false)}>
           <div
-            className="fixed top-0 right-0 w-5/6 max-w-sm h-full bg-white dark:bg-slate-900 shadow-2xl z-50 p-6 flex flex-col justify-between overflow-y-auto border-l border-slate-200 dark:border-slate-800"
+            className="absolute top-16 left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-3"
             onClick={(e) => e.stopPropagation()}
           >
-            <div>
-              <div className="flex items-center justify-between pb-5 border-b border-slate-100 dark:border-slate-800">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl overflow-hidden bg-[#F6EB14] shrink-0">
-                    <img
-                      src={COMPANY_INFO.logoSquareUrl}
-                      alt="Logo"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <span className="font-bold text-slate-900 dark:text-white text-sm">
-                    Excel United Int'l
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={toggleTheme}
-                    className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
-                    aria-label="Toggle theme"
-                  >
-                    {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
-                  </button>
-                  <button
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="p-1.5 text-slate-500 hover:text-rose-600 dark:text-slate-400 dark:hover:text-rose-400 rounded-lg cursor-pointer"
-                    aria-label="Close Menu"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="mt-6 flex flex-col gap-1.5">
-                {navLinks.map((link) => {
-                  const isActive = currentPage === link.id;
-                  return (
-                    <button
-                      key={link.id}
-                      onClick={() => handleNavClick(link.id)}
-                      className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-colors cursor-pointer ${
-                        isActive
-                          ? 'bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 border border-rose-300/40'
-                          : 'text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                      }`}
-                    >
-                      {link.label}
-                    </button>
-                  );
-                })}
-              </div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-slate-400 px-3 pb-1">
+              Navigation Menu
             </div>
-
-            <div className="pt-6 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 text-center">
-              © 2026 Excel United International Co., Ltd.
-            </div>
+            {navLinks.map((link) => {
+              const isActive = currentPage === link.id;
+              return (
+                <button
+                  key={link.id}
+                  onClick={() => handleNavClick(link.id)}
+                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all flex items-center justify-between cursor-pointer ${
+                    isActive
+                      ? 'bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 border border-rose-200/60 dark:border-rose-900/40'
+                      : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  {isActive && <span className="w-2 h-2 rounded-full bg-rose-600 dark:bg-rose-400"></span>}
+                </button>
+              );
+            })}
           </div>
         </div>
       )}
