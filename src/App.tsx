@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Breadcrumbs } from './components/Breadcrumbs';
@@ -12,10 +12,15 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { Product } from './types';
 import { ArrowRight, ShieldCheck, Award, Globe2 } from 'lucide-react';
+import { updatePageSEO } from './utils/seo';
 
 function MainApp() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [currentPage, setCurrentPage] = useState<string>('home');
+
+  useEffect(() => {
+    updatePageSEO(currentPage);
+  }, [currentPage]);
 
   const handleNavigate = (pageId: string) => {
     setCurrentPage(pageId);
