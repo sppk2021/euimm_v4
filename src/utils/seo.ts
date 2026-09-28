@@ -5,27 +5,27 @@ interface PageMetadata {
 
 const PAGE_METADATA_MAP: Record<string, PageMetadata> = {
   home: {
-    title: 'Excel United International – Authorized FMCG & Import-Export Distribution Hub',
+    title: 'Excel United International Co., Ltd.',
     description: 'Premier import-export enterprise and authorized distributor of trusted food, beverage, snack, and personal care products across Myanmar and Thailand.',
   },
   products: {
-    title: 'Certified FMCG Products Catalog – Excel United International',
+    title: 'Certified FMCG Products Catalog – Excel United International Co., Ltd.',
     description: 'Browse our official import catalog of 100% FDA-approved food, gourmet beverages, snacks, and skincare products distributed across Myanmar.',
   },
   capabilities: {
-    title: 'What We Do & Core Capabilities – Excel United International',
+    title: 'What We Do & Core Capabilities – Excel United International Co., Ltd.',
     description: 'Explore our comprehensive import-export logistics, cold-chain warehousing, regulatory clearance, and nationwide retail distribution capabilities.',
   },
   about: {
-    title: 'About Us & Corporate Heritage – Excel United International',
+    title: 'About Us & Corporate Heritage – Excel United International Co., Ltd.',
     description: 'Learn about our 18+ years of cross-border trade leadership, Bangkok headquarters, Yangon operations, and long-term FMCG partnerships.',
   },
   network: {
-    title: 'Distribution Network & Retail Partners – Excel United International',
+    title: 'Distribution Network & Retail Partners – Excel United International Co., Ltd.',
     description: 'Discover our extensive nationwide distribution network covering 500+ retail partners, hypermarkets, and wholesale channels across Myanmar.',
   },
   contact: {
-    title: 'Contact & Regional Offices – Excel United International',
+    title: 'Contact & Regional Offices – Excel United International Co., Ltd.',
     description: 'Get in touch with our Bangkok headquarters and Yangon central facility for wholesale orders, commercial inquiries, and vendor partnerships.',
   },
 };
