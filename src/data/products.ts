@@ -49,12 +49,7 @@ export const PRODUCTS: Product[] = [
       'Great for making sandwiches, fried rice, noodle dishes, or quick salads.',
       'Perfect for quick, wholesome lunch boxes and family meals.'
     ],
-    availableChannels: 'Leading supermarkets, convenience stores, and wholesale distribution centers across Myanmar.',
-    netWeight: '155g / 120g Net Weight',
-    casePack: '50 Cans / Master Carton (GW: 9.8 kg)',
-    shelfLife: '36 Months from Production Date',
-    storageCondition: 'Ambient Dry Storage (15°C–28°C)',
-    fdaRegNumber: 'MM-FDA-FOOD-2024-88412',
+    availableChannels: 'Leading supermarkets, convenience stores, and wholesale distribution centers across Myanmar.'
   },
   {
     id: 'royal-nest',
@@ -73,12 +68,7 @@ export const PRODUCTS: Product[] = [
       'Can be served refreshing chilled from the refrigerator or at room temperature.',
       'Ideal for daily health, postpartum wellness, and nourishing gifts.'
     ],
-    availableChannels: 'Supermarkets, pharmacies, specialty wellness stores, and executive gift retailers.',
-    netWeight: '250ml per bottle',
-    casePack: '24 Bottles / Master Carton (GW: 11.2 kg)',
-    shelfLife: '24 Months (Hermetically Sealed)',
-    storageCondition: 'Cool & Dry (Refrigerate after opening)',
-    fdaRegNumber: 'MM-FDA-BEV-2023-41092',
+    availableChannels: 'Supermarkets, pharmacies, specialty wellness stores, and executive gift retailers.'
   },
   {
     id: 'zale-cosmetics',
@@ -97,12 +87,7 @@ export const PRODUCTS: Product[] = [
       'Gently massage until the cream is fully and evenly absorbed.',
       'Use every morning 15 minutes before stepping out for optimal protection.'
     ],
-    availableChannels: 'Cosmetics shops, pharmacies, beauty salons, and modern retail stores.',
-    netWeight: '50g Tube',
-    casePack: '48 Tubes / Master Carton (GW: 4.2 kg)',
-    shelfLife: '36 Months',
-    storageCondition: 'Store below 30°C away from direct sunlight',
-    fdaRegNumber: 'MM-FDA-COS-2024-11029',
+    availableChannels: 'Cosmetics shops, pharmacies, beauty salons, and modern retail stores.'
   },
   {
     id: 'zale-hair-oil',
@@ -121,12 +106,7 @@ export const PRODUCTS: Product[] = [
       'Leave on for at least 30 minutes, or overnight for intensive deep conditioning.',
       'Wash off with mild shampoo. Use 2–3 times a week for silky, resilient hair.'
     ],
-    availableChannels: 'Beauty supply distributors, hair salons, and supermarkets nationwide.',
-    netWeight: '100ml Bottle',
-    casePack: '36 Bottles / Master Carton (GW: 5.1 kg)',
-    shelfLife: '36 Months',
-    storageCondition: 'Room Temperature (Solidifies below 24°C naturally)',
-    fdaRegNumber: 'MM-FDA-COS-2023-77291',
+    availableChannels: 'Beauty supply distributors, hair salons, and supermarkets nationwide.'
   },
   {
     id: 'placenta-darin',
@@ -145,12 +125,7 @@ export const PRODUCTS: Product[] = [
       'Use morning and evening consistently for best rejuvenation results.',
       'Complement with daily sun protection during daytime use.'
     ],
-    availableChannels: 'Premium aesthetic clinics, beauty boutiques, and department store counters.',
-    netWeight: '50g Luxury Jar',
-    casePack: '48 Jars / Master Carton (GW: 6.8 kg)',
-    shelfLife: '36 Months',
-    storageCondition: 'Cool, dry location below 28°C',
-    fdaRegNumber: 'MM-FDA-COS-2024-33910',
+    availableChannels: 'Premium aesthetic clinics, beauty boutiques, and department store counters.'
   },
   {
     id: 'darin-goat-milk',
@@ -169,12 +144,7 @@ export const PRODUCTS: Product[] = [
       'Gently massage onto face and neck in circular motions for 1 minute.',
       'Rinse thoroughly with clean water and pat dry. Use daily morning and evening.'
     ],
-    availableChannels: 'Pharmacies, modern trade supermarkets, and cosmetic retail stores.',
-    netWeight: '150ml Pump Bottle',
-    casePack: '36 Bottles / Master Carton (GW: 7.2 kg)',
-    shelfLife: '30 Months',
-    storageCondition: 'Dry Room Temperature',
-    fdaRegNumber: 'MM-FDA-COS-2024-55821',
+    availableChannels: 'Pharmacies, modern trade supermarkets, and cosmetic retail stores.'
   },
   {
     id: 'song-heng',
@@ -193,12 +163,7 @@ export const PRODUCTS: Product[] = [
       'Serve alongside grilled meats or fried fish to cleanse the palate.',
       'Can be enjoyed directly from the jar without additional seasoning.'
     ],
-    availableChannels: 'Wholesalers, wet markets, modern supermarkets, and food service partners.',
-    netWeight: '250g Glass Jar',
-    casePack: '24 Jars / Master Carton (GW: 10.5 kg)',
-    shelfLife: '18 Months',
-    storageCondition: 'Ambient (Keep in cool dry pantry)',
-    fdaRegNumber: 'MM-FDA-FOOD-2023-66201',
+    availableChannels: 'Wholesalers, wet markets, modern supermarkets, and food service partners.'
   },
   {
     id: 'stick-biscuit',
@@ -217,12 +182,7 @@ export const PRODUCTS: Product[] = [
       'Ideal for school lunchboxes, office breaks, travel, and road trips.',
       'Great for sharing with friends and family during gatherings and movie nights.'
     ],
-    availableChannels: 'Major supermarkets, convenience chain stores, school canteens, and general retail stores across Myanmar.',
-    netWeight: '55g Foil Pouch',
-    casePack: '60 Pouches / Master Carton (GW: 4.8 kg)',
-    shelfLife: '12 Months',
-    storageCondition: 'Store in dry place, avoid humidity',
-    fdaRegNumber: 'MM-FDA-SNACK-2024-90144',
+    availableChannels: 'Major supermarkets, convenience chain stores, school canteens, and general retail stores across Myanmar.'
   }
 ];
 
@@ -275,86 +235,4 @@ export const CAPABILITIES = [
       'Dedicated logistics fleet for prompt dispatch',
     ]
   }
-];
-
-export interface DistributionHub {
-  id: string;
-  name: string;
-  city: string;
-  country: string;
-  role: string;
-  capacity: string;
-  activeAccounts: string;
-  leadTime: string;
-  temperatureControl: string;
-  description: string;
-  majorPartners: string[];
-}
-
-export const DISTRIBUTION_HUBS: DistributionHub[] = [
-  {
-    id: 'yangon-central',
-    name: 'Yangon Central Logistics & Cold Hub',
-    city: 'Yangon',
-    country: 'Myanmar',
-    role: 'Central Operations, Modern Trade Consolidation & Delta Dispatch',
-    capacity: '12,000+ CBM Climate-Controlled Space',
-    activeAccounts: '350+ Modern Trade Outlets & Wholesalers',
-    leadTime: 'Same-day to 24h within Yangon Metro',
-    temperatureControl: 'Multi-zone: Ambient (22°C), Chilled (+4°C), Frozen (-18°C)',
-    description: 'Situated in the strategic Tharkayta Industrial Zone with rapid access to Yangon Port and regional ring highways, this central facility coordinates FMCG replenishment across lower Myanmar.',
-    majorPartners: ['City Mart Supermarket', 'Ocean Supercenter', 'Marketplace', 'Makro Wholesale Yangon', 'G&G Convenience Stores'],
-  },
-  {
-    id: 'mandalay-depot',
-    name: 'Mandalay Upper Myanmar Depot',
-    city: 'Mandalay',
-    country: 'Myanmar',
-    role: 'Regional Transshipment to Shan State, Sagaing & Kachin',
-    capacity: '6,500 CBM Dry & Chilled Storage',
-    activeAccounts: '180+ Regional Wholesalers & Department Stores',
-    leadTime: '24h – 48h Delivery to Upper Myanmar Townships',
-    temperatureControl: 'Ambient & Chilled (+4°C)',
-    description: 'Acts as the primary trading springboard for upper Myanmar commercial distribution, supplying key regional depots, hypermarkets, and local market cooperatives.',
-    majorPartners: ['Ocean Supercenter Mandalay', 'Diamond Plaza', 'Regional Wholesale Cooperatives', 'Shan State Distributors'],
-  },
-  {
-    id: 'bangkok-sourcing',
-    name: 'Bangkok Sourcing & Export HQ',
-    city: 'Bangkok',
-    country: 'Thailand',
-    role: 'Manufacturer Procurement, Quality Audit & Cross-Border Staging',
-    capacity: 'Direct Factory Line Allocation & Consolidation',
-    activeAccounts: '25+ Certified Thai Food & Cosmetic Manufacturers',
-    leadTime: 'Factory-direct containerization in 48h',
-    temperatureControl: 'Reefer Container & Ambient Pallet Loading',
-    description: 'Corporate headquarters directly liaising with certified Thai food, snack, and wellness producers, ensuring strict batch quality control and export documentation.',
-    majorPartners: ['Authorized Brand Principals', 'Samut Prakan Export Staging', 'Thai FDA Certified Laboratories'],
-  },
-  {
-    id: 'myawaddy-corridor',
-    name: 'Mae Sot – Myawaddy Border Gateway',
-    city: 'Myawaddy / Mae Sot',
-    country: 'Myanmar / Thailand',
-    role: 'Primary Overland Customs Clearance & Cross-Dock Port',
-    capacity: 'Dedicated Bonded Clearance Lane',
-    activeAccounts: 'Daily Overland Cross-Border Convoys',
-    leadTime: '24h – 36h expedited border turnaround',
-    temperatureControl: 'Active Reefer Trucks & Insulated Box Fleet',
-    description: 'The premier bilateral overland trade bridge connecting Central Thailand industrial clusters with Myanmar highway networks, managed with full legal import-export documentation.',
-    majorPartners: ['Myanmar Customs Department', 'Thai Customs Department', 'Licensed Bonded Transporters'],
-  },
-  {
-    id: 'mawlamyine-hub',
-    name: 'Mawlamyine Southeastern Corridor',
-    city: 'Mawlamyine',
-    country: 'Myanmar',
-    role: 'Southern Coastal Distribution & Mon / Karen Regional Supply',
-    capacity: '3,200 CBM Distribution Depot',
-    activeAccounts: '90+ Supermarkets & General Trade Grocers',
-    leadTime: '24h dispatch to Mon State and Tanintharyi',
-    temperatureControl: 'Ambient & Controlled Ventilation',
-    description: 'Strategically positioned to service retail stores, coastal distributors, and local trade networks along the southern economic corridor.',
-    majorPartners: ['Ocean Supercenter Mawlamyine', 'Regional Supermarkets', 'Local General Grocers'],
-  },
 ];
