@@ -1,0 +1,6 @@
+{
+  "name": "Excel United International (EUI)",
+  "description": "Corporate website and product showcase for Excel United International Co., Ltd. - FMCG import, export, and nationwide distribution in Southeast Asia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
